@@ -1,0 +1,86 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <title>min. C-19 OWID dashboard</title>
+    <meta name="" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      body {
+        margin: 5%;
+        background-color: #131516;
+        color: #bab8b6;
+      }
+      #header {
+        background-color: #131516;
+      }
+
+      #frames_section > ul {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+        grid-gap: 1rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      #frames_section > ul > li {
+        border: 1px solid #2D3132;
+        border-radius: .5rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section id="header">
+      <p>A personal, minimalist C-19 dashboard based on OWID data.Minimalist C-19 dashboard on OWID data. </p>
+      <hr>
+    </section>
+
+    <section id="frames_section">
+      <ul>
+        <li>
+          <iframe src="https://ourworldindata.org/grapher/current-covid-patients-icu?country=~NLD" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+        </li>
+        <li>
+          <iframe src="https://ourworldindata.org/explorers/coronavirus-data-explorer?zoomToSelection=true&time=2020-03-01..latest&facet=none&pickerSort=desc&pickerMetric=new_cases_smoothed_per_million&Metric=Confirmed+cases&Interval=7-day+rolling+average&Relative+to+Population=true&Color+by+test+positivity=false&country=~NLD&hideControls=true" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+        </li>
+        <li>
+          <iframe src="https://ourworldindata.org/grapher/tests-per-confirmed-case-daily-smoothed?tab=chart&country=~NLD" loading="lazy" style="width: 100%; height: 600px; border: p0px none;"></iframe>
+        </li>
+        <li>
+          <iframe src="https://ourworldindata.org/explorers/coronavirus-data-explorer?zoomToSelection=true&time=2020-03-01..latest&facet=none&pickerSort=desc&pickerMetric=new_deaths_per_million&Metric=Confirmed+deaths&Interval=7-day+rolling+average&Relative+to+Population=true&Color+by+test+positivity=false&country=~NLD&hideControls=true" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+        </li>
+        <li>
+          <iframe src="https://ourworldindata.org/explorers/coronavirus-data-explorer?zoomToSelection=true&time=2020-03-14..latest&facet=none&pickerSort=asc&pickerMetric=location&hideControls=true&Metric=Case+fatality+rate&Interval=Cumulative&Relative+to+Population=false&Color+by+test+positivity=true&country=~NLD" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+        </li>
+        <li>
+          <iframe src="https://ourworldindata.org/grapher/excess-mortality-p-scores-projected-baseline?country=~NLD" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+        </li>
+        <li>
+          <iframe src="https://ourworldindata.org/grapher/covid-vaccine-booster-doses-per-capita?country=~NLD" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+        </li>
+        <li>
+          <iframe src="https://ourworldindata.org/explorers/coronavirus-data-explorer?yScale=log&zoomToSelection=true&time=2020-03-01..latest&facet=none&pickerSort=desc&pickerMetric=total_cases&hideControls=true&Metric=Confirmed+deaths&Interval=Cumulative&Relative+to+Population=false&Color+by+test+positivity=false&country=NLD~OWID_WRL~North+America~Europe" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+        </li>
+      </ul>
+    </section>
+    <section id="footer">
+      <hr>
+      <p>Sources: </p>
+<ul class="org-ul">
+<li><a href="https://ourworldindata.org/grapher/excess-mortality-p-scores-projected-baseline?country=~NLD">OWID excess mortality</a></li>
+<li><a href="https://ourworldindata.org/grapher/tests-per-confirmed-case-daily-smoothed?tab=chart&amp;country=~NLD">OWID c-19 test per case</a></li>
+<li><a href="https://ourworldindata.org/explorers/coronavirus-data-explorer?zoomToSelection=true&amp;time=2020-03-01..latest&amp;facet=none&amp;pickerSort=desc&amp;pickerMetric=new_deaths_per_million&amp;Metric=Confirmed+deaths&amp;Interval=7-day+rolling+average&amp;Relative+to+Population=true&amp;Color+by+test+positivity=false&amp;country=~NLD">OWID c-19 confirmed deaths</a></li>
+<li><a href="https://ourworldindata.org/explorers/coronavirus-data-explorer?zoomToSelection=true&amp;time=2020-03-01..latest&amp;facet=none&amp;pickerSort=desc&amp;pickerMetric=new_cases_smoothed_per_million&amp;Metric=Confirmed+cases&amp;Interval=7-day+rolling+average&amp;Relative+to+Population=true&amp;Color+by+test+positivity=false&amp;country=~NLD">OWID c-19 confirmed cases</a></li>
+<li><a href="https://ourworldindata.org/explorers/coronavirus-data-explorer?zoomToSelection=true&amp;time=2020-03-14..latest&amp;facet=none&amp;pickerSort=asc&amp;pickerMetric=location&amp;hideControls=true&amp;Metric=Case+fatality+rate&amp;Interval=Cumulative&amp;Relative+to+Population=false&amp;Color+by+test+positivity=true&amp;country=~NLD">OWID c-19 case fatalaty rate</a></li>
+<li><a href="https://ourworldindata.org/grapher/current-covid-patients-hospital?country=~NLD">OWID c-19 hospitalizations</a></li>
+<li><a href="https://ourworldindata.org/grapher/covid-vaccine-booster-doses-per-capita?country=~NLD">OWID c-19 boosters administered</a></li>
+<li><a href="https://ourworldindata.org/grapher/current-covid-patients-icu?country=~NLD">OWID c-19 ICU</a></li>
+<li><a href="https://ourworldindata.org/explorers/coronavirus-data-explorer?zoomToSelection=true&amp;time=2020-03-01..latest&amp;facet=none&amp;pickerSort=desc&amp;pickerMetric=total_cases&amp;hideControls=true&amp;Metric=Confirmed+deaths&amp;Interval=Cumulative&amp;Relative+to+Population=false&amp;Color+by+test+positivity=false&amp;country=~NLD">OWID c-19 cum deaths</a></li>
+</ul>
+    </section>
+
+  </body>
+</html>
+
